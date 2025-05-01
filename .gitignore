@@ -1,0 +1,29 @@
+# Node.js frontend
+node_modules/
+dist/
+build/
+.cache/
+
+# Haskell backend (Stack)
+.stack-work/
+dist/
+*.hi
+*.o
+*.dyn_o
+*.dyn_hi
+*.jsexe
+.ghc.environment.*
+report.html
+test.log
+
+# Haskell backend (Cabal)
+dist-new-style/
+.ghc.environment.*
+
+# Other common ignores
+.DS_Store
+*.log
+*.swp
+*.swo
+.vscode/
+.idea/
