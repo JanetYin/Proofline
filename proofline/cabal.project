@@ -1,0 +1,5 @@
+packages: .
+
+package proofline
+  tests: True
+  library-visibility: public  -- Make all modules visible to tests
