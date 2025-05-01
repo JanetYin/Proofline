@@ -10,7 +10,6 @@ import GHC.Generics (Generic)
 import Control.Exception (try, SomeException)
 import qualified Data.Text as T
 
--- 保留简化版的数据类型
 data ApiResponse = ApiResponse
   { success :: Bool
   , message :: Maybe Text

@@ -49,24 +49,7 @@ spec = do
     it "fails on non-unifiable terms" $ do
       result <- testUnify "U" "U → U"
       result `shouldBe` False
-  
---   describe "Unification with metavariables" $ do
---     it "solves simple metavariables" $ do
---         Metacontext.reset
-        
---         let src = unlines [
---                 "let id : U → U = λ x. x;",
---                 "let f : U → U = λ x. _;",  
---                 "let test = f U;",           
---                 "let test2 = id U"           
---                 ]
-        
---         raw <- Parser.parseString src
---         (_, _) <- Elaboration.infer (Context.emptyContext (initialPos "(test)")) raw
-        
---         metas <- getMetas
---         length metas `shouldBeGreaterThan` 0
-  
+
   describe "Unification with dependent types" $ do
     it "unifies in Pi types" $ do
       result <- testUnify "(x : U) → U" "(y : U) → U"

@@ -9,15 +9,11 @@ import qualified Presyntax as P
 import qualified Syntax
 import Common
 
--- Generate simple variable names
--- We need a newtype to avoid the overlapping instance with [Char]/String
 newtype TestName = TestName { unTestName :: Name }
   deriving (Show, Eq)
-
 instance Arbitrary TestName where
   arbitrary = TestName <$> elements ["x", "y", "z", "a", "b", "c", "f", "g", "h"]
 
--- Generate simple raw terms
 instance Arbitrary P.Raw where
   arbitrary = sized genRaw
     where

@@ -104,7 +104,6 @@ spec = do
         result <- elaborationSucceeds src
         result `shouldBe` True
         
-        -- 可以增加类型检查
         hasType <- checkHasType src "U"
         hasType `shouldBe` True
   

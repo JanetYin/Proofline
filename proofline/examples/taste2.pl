@@ -19,6 +19,6 @@ let addzero : (n : Nat) -> Eq Nat (add n zero) n =
   \n. refl Nat n;
 
 let test : Eq Nat (add two zero) two = addzero two;
-let incorrect : Eq Nat ( add two one ) two = addzero two ;
+-- let wrong : Eq Nat ( add two one ) two = addzero two ;
 -- calling test
 test
